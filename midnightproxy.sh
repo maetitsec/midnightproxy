@@ -1,8 +1,13 @@
 #!/bin/bash
 ############################################################
-# MIDNIGHT PROXY
-# Author: MIDNIGHT
-# Email: NA
+# Squid Proxy Installer
+# Author: Yujin Boby
+# Email: admin@serverOk.in
+# Github: https://github.com/serverok/squid-proxy-installer/
+# Web: https://serverok.in/squid
+############################################################
+# For paid support, contact
+# https://serverok.in/contact
 ############################################################
 
 if [ `whoami` != root ]; then
