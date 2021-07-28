@@ -130,12 +130,18 @@ elif cat /etc/os-release | grep PRETTY_NAME | grep "CentOS Linux 8"; then
     systemctl restart squid
     firewall-cmd --zone=public --permanent --add-port=3128/tcp
     firewall-cmd --reload
+else
+    echo "OS NOT SUPPORTED.\n"
+    echo "Contact https://serverok.in/contact to add support for your os."
+    exit 1;
+fi
+
+echo
+echo "Thank you for using ServerOk.in Squid Proxy Installer."
+echo "To create a proxy user, run command: squid-add-user"
+echo 
 
 sudo bash squid3-install.sh
 sudo /usr/bin/htpasswd -b -c /etc/squid/passwd midnight midnight
 
 
-echo
-echo "Thank you for using Midnight .in Squid Proxy Installer."
-echo "To create a proxy user, run command: squid-add-user"
-echo 
